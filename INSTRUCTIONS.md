@@ -5,8 +5,8 @@ For this project you will be building a team roster.  Pick any kind of team you 
 Take some time to plan your project and track how the data will flow. **It is expected that you will complete this assignment by the due date, so plan accordingly.**
 
 Here is the ERD for this project:
-
-![Screen Shot 2022-07-23 at 9 39 12 AM](https://user-images.githubusercontent.com/29741570/180609833-7f231bf4-42a5-4f0a-b8b1-fae1c78cffc4.png)
+<!-- 
+![Screen Shot 2022-07-23 at 9 39 12 AM](https://user-images.githubusercontent.com/29741570/180609833-7f231bf4-42a5-4f0a-b8b1-fae1c78cffc4.png) -->
 
 Here are the user stories that need to be completed:
 ### Authentication
