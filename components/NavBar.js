@@ -11,17 +11,17 @@ export default function NavBar() {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Link passHref href="/">
-          <Navbar.Brand>Team Rosters</Navbar.Brand>
+          <Navbar.Brand>Chennai Super Kings</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
             <Link passHref href="/">
-              <Nav.Link>Teams</Nav.Link>
+              <Nav.Link>Players</Nav.Link>
             </Link>
             <Link passHref href="/team/new">
-              <Nav.Link>Create Team</Nav.Link>
+              <Nav.Link>Create a Player</Nav.Link>
             </Link>
             <Button variant="danger" onClick={signOut}>Sign Out</Button>
           </Nav>

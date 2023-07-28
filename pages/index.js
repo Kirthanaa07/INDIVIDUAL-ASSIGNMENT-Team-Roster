@@ -2,17 +2,17 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
-import getTeams from '../api/teamData';
-import useAuth from '../utils/context/authContext';
+import { getTeams } from '../api/teamData';
+import { useAuth } from '../utils/context/authContext';
 import TeamCard from '../components/TeamCard';
 
 export default function Home() {
-  const [teams, setTeams] = useState([]);
+  const [team, setTeam] = useState([]);
 
   const { user } = useAuth();
 
   const getAllTheTeams = () => {
-    getTeams(user.uid).then(setTeams);
+    getTeams(user.uid).then(setTeam);
   };
 
   useEffect(() => {
@@ -22,12 +22,12 @@ export default function Home() {
   return (
     <div className="text-center my-4">
       <Link href="/team/new" passHref>
-        <Button>Add A Team</Button>
+        <Button>Add A Player</Button>
       </Link>
       <div className="d-flex flex-wrap">
         {/* TODO: map over books here using BookCard component */}
-        {teams.map((team) => (
-          <TeamCard key={team.firebaseKey} teamObj={team} onUpdate={getAllTheTeams} />
+        {team.map((items) => (
+          <TeamCard key={items.firebaseKey} teamObj={items} onUpdate={getAllTheTeams} />
         ))}
       </div>
     </div>
